@@ -1,0 +1,23 @@
+USE toko_online;
+CREATE TABLE netflix_titles (show_id INT,
+			     tipe ENUM('Movie', 'TV Show'),
+			     title VARCHAR(70),	
+			     director VARCHAR(30),	
+			     casting VARCHAR(30),	
+			     country VARCHAR(30),	
+			     date_added DATE,	
+			     release_year YEAR,	
+			     rating VARCHAR(20),	
+			     duration VARCHAR(20),	
+			     listed_in VARCHAR(30),	
+			     description LONGTEXT);
+
+DESCRIBE netflix_titles;
+
+SELECT * FROM netflix_titles;
+
+SELECT * FROM netflix_titles WHERE duration='90 min';
+
+SELECT * FROM netflix_titles WHERE country LIKE '%thailand%';
+
+SELECT * FROM netflix_titles WHERE release_year='2015';
